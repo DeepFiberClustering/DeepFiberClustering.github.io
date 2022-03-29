@@ -184,9 +184,26 @@
             <div class="col-md-8 col-md-offset-2">
                 <h3>Video</h3><p style="color:blue;font-size:11px;">(contains audio w/ subtitles)</p>
                 <div class="text-center">
-                <iframe width="720" height="405"
-                src="https://www.youtube.com/embed/oNUUtU-ugP0?autoplay=1&mute=1">
-                </iframe>
+                    <video id="video_id" width="100%" controls="" controlsList="nodownload">>
+                        <source src="./miccai2021-video_1547 - Compressed.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="en" src="./@InProceedings{SGGpoint,
+    author    = {Zhang, Chaoyi and Yu, Jianhui and Song, Yang and Cai, Weidong},
+    title     = {Exploiting Edge-Oriented Reasoning for 3D Point-Based Scene Graph Analysis},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {9705-9715}
+}SGGpoint.vtt">
+                    </video>
+
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                        var video = document.querySelector('#video_id'); // get the video element
+                        var tracks = video.textTracks; // one for each track element
+                        var track = tracks[0]; // corresponds to the first track element
+                        track.mode = 'hidden';});
+                    </script>
+
                 </div>
             </div>
         </div>
