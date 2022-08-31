@@ -187,15 +187,7 @@
                 <img src="./images/fig1.PNG" class="img-responsive" alt="overview"><br>
 		<img src="./images/fig2.PNG" class="img-responsive" alt="clusters"><br>
                 <p class="text-justify">
-		White matter fiber clustering (WMFC) enables parcellation of white matter tractography for applications such as disease classification
-		and anatomical tract segmentation. However, the lack of ground truth and the ambiguity of fiber data (the points along a fiber can 
-		equivalently be represented in forward or reverse order) pose challenges to this task. We propose a novel WMFC framework based on 
-		unsupervised deep learning. We solve the unsupervised clustering problem as a self-supervised learning task. Specifically, we use 
-		a convolutional neural network to learn embeddings of input fibers, using pairwise fiber distances as pseudo annotations. This enables 
-		WMFC that is insensitive to fiber point ordering. In addition, anatomical coherence of fiber clusters is improved by incorporating 
-		brain anatomical segmentation data. The proposed framework enables outlier removal in a natural way by rejecting fibers with low 
-		cluster assignment probability. We train and evaluate our method using 200 datasets from the Human Connectome Project. Results 
-		demonstrate superior performance and efficiency of the proposed approach.
+		White matter fiber clustering (WMFC) is an important strategy for white matter parcellation, which enables quantitative analysis of white matter connections in health and disease. WMFC is usually performed in an unsupervised manner without the need of labeled ground truth data. While widely used WMFC approaches have shown good performance using classical machine learning techniques, recent advances in deep learning reveal a promising direction towards fast and effective WMFC. In this work, we propose a novel deep learning framework for WMFC, Deep Fiber Clustering (DFC), which solves the unsupervised clustering problem as a self-supervised learning task with a domain-specific pretext task to predict pairwise fiber distances. This enables the fiber representation learning to handle a known challenge in WMFC, i.e., the sensitivity of clustering results to the point ordering along fibers. We design a novel network architecture that represents input fibers as point clouds and allows the incorporation of additional sources of input information from gray matter parcellation. Thus DFC makes use of combined information about white matter fiber geometry and gray matter anatomy to improve anatomical coherence of fiber clusters. In addition, DFC conducts outlier removal in a natural way by rejecting fibers with low cluster assignment probability. We evaluate DFC on three independently acquired cohorts, including data from 220 individuals across genders, ages (young and elderly adults), and different health conditions (healthy control and multiple neuropsychiatric disorders). We  compare DFC to several state-of-the-art WMFC algorithms. Experimental results demonstrate superior performance of DFC in terms of cluster compactness, generalization ability, anatomical coherence, and computational efficiency. 
                 </p>
             </div>
         </div>
